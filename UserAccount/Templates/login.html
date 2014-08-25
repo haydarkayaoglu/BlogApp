@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Blog Girisi</title>
+            <link rel="stylesheet" type="text/css" href="/dosyalar/base.css" />
+    </head>
+    <body>
+        <h1>Kullanıcı Girişi</h1>
+        {% comment %}{% if form.errors %}
+        <div class="errornote">Kullanıcı adı veya parola hatalı.</div>
+        {% endif %}{% endcomment %}
+        <form method="POST">
+        {% csrf_token %}
+            <table>
+
+                {{ form.as_table }}
+                {% comment %}
+                <tr>
+                    <td>{{form.username.label_tag}}</td>
+                    <td>{{form.username}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.password.label_tag}}</td>
+                    <td>{{form.password}}</td>
+                </tr>{% endcomment %}
+
+            </table>
+        <input type="submit" value="Giriş Yap" />
+
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+        {% else %}
+            <input type="hidden" name="next" value="/posts/" />
+        {% endif %}
+        </form>
+    </body>
+</html>

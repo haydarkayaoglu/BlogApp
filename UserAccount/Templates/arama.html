@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+ 
+<form action="/arama/" method="post">
+    {% csrf_token %}
+<b>Ara:</b><input type="text" name="aranan" /><br/>
+    <input type="submit" value="Ara" />
+</form>
+ 
+</body>
+</html>

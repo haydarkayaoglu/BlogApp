@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yönetim</title>
+    <link rel="stylesheet" type="text/css" href="/dosyalar/style.css" />
+</head>
+<body>
+<h2>Kullanıcı sayfamız</h2>
+ 
+{% if request.user.is_authenticated %}
+    <h3>Hoş geldin, {{request.user.get_full_name}}</h3>
+ 
+    <div><a href="/arkadaslar">Doktor İşlemleri</a></div>
+    <div><a href="/listeler">Hasta İşlemleri</a></div>
+
+    <a href="?cikis=cikis">Çıkış</a>
+{% else %}
+<h3>Giriş Formu</h3>
+<form method="POST">
+    {% csrf_token %}
+    <div>
+         {{ giris_formu }}
+    </div>
+ 
+    <input type="submit" name="giris" value="Giriş Yap" />
+</form>
+{% endif %}
+</body>
+</html>

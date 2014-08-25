@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Postlarımız</title>
+</head>
+<body>
+
+<table border="1" align="center">
+    <tr>
+        <th height="50px" width="100px">Post</th>
+        <th height="50px" width="100px">Yazar Adı</th>
+        <th height="50px" width="100px">İçerik</th>
+        <th height="50px" width="100px">Yorum</th>
+        <th height="50px" width="100px">Yorumcu</th>
+    </tr>
+    {% for BlogPost in posts %}
+        <tr>
+            <td>{{ BlogPost.content }}</td>
+            <td>{{ BlogPost.blogUser.get_full_name }}</td>
+
+
+                {% for cmmnt in BlogPost.comments.all %}
+                    <td>{{ cmmnt.comment}}---</td>
+                {% endfor %}
+
+                {% for yrmc in BlogComment.userData.get_full_name %}
+                    <td>{{ yrmc.get_full_name}}---</td>
+                {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>User Profil</title>
+
+    {% if request.user.is_authenticated %}
+    <h3>Hoş geldin {{request.user.first_name}}
+                    {{request.user.last_name}}</h3>
+    {% endif %}
+
+
+
+
+</head>
+<body>
+
+
+<table border="1" align="center">
+    <tr><th height="50px" width="100px">Adi</th>
+        <th height="50px" width="100px">Soyadi</th>
+        <th height="50px" width="100px">Telefon</th>
+        <th height="50px" width="190px">E-Posta</th>
+        <th height="50px" width="190px">Profil Resmi</th>
+    </tr>
+
+    {% for UserData in users %}
+    <tr>
+        <td height="30px">{{ UserData.name }}</td>
+        <td>{{ UserData.surname }}</td>
+        <td>{{ UserData.phone }}</td>
+        <td>{{ UserData.email }}</td>
+    </tr>
+
+
+    {% endfor %}
+
+    <a href="/accounts/logout/">Çıkış</a>
+</table>
+
+
+
+
+</body>
+</html>
