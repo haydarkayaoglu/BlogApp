@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.core.context_processors import request
-from django.contrib.auth.decorators import login_required
-
 from django.http import *
 from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 from UserAccount.models import *
-from UserAccount.forms import UserDataForm, UserPostCreationForm
+from UserAccount.forms import UserDataForm, UserCreateForm
 from UserAccount.forms import UserProfileForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
@@ -15,7 +13,7 @@ from django.contrib.auth import *
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.conf import settings
-from models import UserProfile, BlogPost
+from models import UserProfile
 
 
 def urlpath(request):
@@ -23,7 +21,6 @@ def urlpath(request):
     return HttpResponse('<b>Adres Yolu: </b>%s' % urlpath)
 
 
-@login_required
 def users(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/accounts/login/?next=%s' % request.path)
@@ -87,7 +84,7 @@ def userProfile(request):
 
 def register(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = UserCreateForm(request.POST)
         if form.is_valid():
             form.save()
             #geçici
@@ -98,8 +95,9 @@ def register(request):
                 login(request, usr)
             return HttpResponseRedirect('/UserProfile/')
     else:
-        form = UserCreationForm()
-    return render_to_response('register.html', locals(), context_instance=RequestContext(request))
+        form = UserCreateForm()
+    return render(request, 'register.html', {"form": form})
+
 
 
 def profile_pictures(request, picture_name):

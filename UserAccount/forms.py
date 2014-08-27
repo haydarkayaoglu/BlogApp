@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django.forms.models import ModelForm
 from UserAccount.models import BlogPost, UserProfile
 
@@ -27,6 +29,19 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         exclude = ('user', )
+
+
+class UserCreateForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ("first_name",
+                  "last_name",
+                  "username",
+                  "password1",
+                  "password2",
+                  "email")
+        #exclude = ('username')
+
 
 
 #kullanıcınn post göndermesi için
