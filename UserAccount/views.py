@@ -26,8 +26,6 @@ def kullanici_kontrol(user):
     return "haydark" in user.username
 
 
-@login_required
-@user_passes_test(kullanici_kontrol)
 def kullanici_ekle(request):
     if request.method == "POST":
         form = UserDataForm(request.POST)
@@ -72,7 +70,6 @@ def register(request):
     else:
         form = UserCreateForm()
     return render(request, 'register.html', {"form": form})
-
 
 
 def profile_pictures(request, picture_name):
