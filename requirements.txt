@@ -1,0 +1,7 @@
+Django==1.4.8
+PIL==1.1.7
+argparse==1.2.1
+django-cleanup==0.1.10
+ipdb==0.8
+ipython==2.2.0
+wsgiref==0.1.2

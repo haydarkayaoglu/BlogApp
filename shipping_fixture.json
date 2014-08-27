@@ -1,0 +1,674 @@
+[
+    {
+        "pk": 10, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "blogcomment", 
+            "name": "blog comment", 
+            "app_label": "UserAccount"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "blogpost", 
+            "name": "blog post", 
+            "app_label": "UserAccount"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "contenttype", 
+            "name": "content type", 
+            "app_label": "contenttypes"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "group", 
+            "name": "group", 
+            "app_label": "auth"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "logentry", 
+            "name": "log entry", 
+            "app_label": "admin"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "permission", 
+            "name": "permission", 
+            "app_label": "auth"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "session", 
+            "name": "session", 
+            "app_label": "sessions"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "site", 
+            "name": "site", 
+            "app_label": "sites"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "user", 
+            "name": "user", 
+            "app_label": "auth"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "contenttypes.contenttype", 
+        "fields": {
+            "model": "userprofile", 
+            "name": "user profile", 
+            "app_label": "UserAccount"
+        }
+    }, 
+    {
+        "pk": "e51a9ea01bcfaa8325a26848bd2962f3", 
+        "model": "sessions.session", 
+        "fields": {
+            "expire_date": "2014-09-10T05:44:01.790Z", 
+            "session_data": "ZDI3MzliZTY3MjA0ZTcyZGYxYTMwNDkwZjA1MWY3ZjcxNTk4YTBkMTqAAn1xAVUKdGVzdGNvb2tp\nZVUGd29ya2VkcQJzLg==\n"
+        }
+    }, 
+    {
+        "pk": "0d3d4b9e922d091b21962598a5540c4a", 
+        "model": "sessions.session", 
+        "fields": {
+            "expire_date": "2014-09-10T05:57:07.749Z", 
+            "session_data": "ZTQzNzg1OTQ5MWU4NjEzZjgzZDBmNDE5NGRjMmU2ZjAzYjBmOTU1YzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQRLAXUu\n"
+        }
+    }, 
+    {
+        "pk": "615a1a6ae97d82429e62f68ca85e2a9c", 
+        "model": "sessions.session", 
+        "fields": {
+            "expire_date": "2014-09-10T06:28:33.483Z", 
+            "session_data": "YzE3OTE1ODAwNmMxYTcyMjYyNzY0Yzg2ZGQwMzNjMTc3YjgzMTg1ZTqAAn1xAShVCnRlc3Rjb29r\naWVVBndvcmtlZHECVQ1fYXV0aF91c2VyX2lkSwNVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmR1Lg==\n"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "example.com", 
+            "name": "example.com"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "UserAccount.blogpost", 
+        "fields": {
+            "content": "i\u00e7erik", 
+            "blogUser": 1, 
+            "title": "post 1 bu"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "UserAccount.blogpost", 
+        "fields": {
+            "content": "Bu da post 2 nin i\u00e7eri\u011fi", 
+            "blogUser": 3, 
+            "title": "Post 2 ba\u015fl\u0131\u011f\u0131 bu"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "UserAccount.blogpost", 
+        "fields": {
+            "content": "Bu post 3 i\u00e7in i\u00e7erik olsa gerek", 
+            "blogUser": 2, 
+            "title": "Bu da post 3 \u00fcn ba\u015fl\u0131\u011f\u0131"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "UserAccount.blogcomment", 
+        "fields": {
+            "comment": "Selam, Bu post 1 i\u00e7in yorumum. Ne bi\u00e7im yaz\u0131 la bu.", 
+            "blogPost": 1, 
+            "userProfile": 2
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "UserAccount.blogcomment", 
+        "fields": {
+            "comment": "Bu post 2 i\u00e7in yorumum: Allah'\u0131ndan bul emi.", 
+            "blogPost": 2, 
+            "userProfile": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "UserAccount.blogcomment", 
+        "fields": {
+            "comment": "Post 3 efsane olmu\u015f reis. Ama sen bence bir daha blog payla\u015f\u0131m\u0131 yapma. Zirven bu olsun.", 
+            "blogPost": 3, 
+            "userProfile": 3
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_blogcomment", 
+            "name": "Can add blog comment", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_blogcomment", 
+            "name": "Can change blog comment", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_blogcomment", 
+            "name": "Can delete blog comment", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_blogpost", 
+            "name": "Can add blog post", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_blogpost", 
+            "name": "Can change blog post", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_blogpost", 
+            "name": "Can delete blog post", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_userprofile", 
+            "name": "Can add user profile", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_userprofile", 
+            "name": "Can change user profile", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_userprofile", 
+            "name": "Can delete user profile", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_logentry", 
+            "name": "Can add log entry", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_logentry", 
+            "name": "Can change log entry", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_logentry", 
+            "name": "Can delete log entry", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_group", 
+            "name": "Can add group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_group", 
+            "name": "Can change group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_group", 
+            "name": "Can delete group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_permission", 
+            "name": "Can add permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_permission", 
+            "name": "Can change permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_permission", 
+            "name": "Can delete permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_user", 
+            "name": "Can add user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_user", 
+            "name": "Can change user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_user", 
+            "name": "Can delete user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_contenttype", 
+            "name": "Can add content type", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_contenttype", 
+            "name": "Can change content type", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_contenttype", 
+            "name": "Can delete content type", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_session", 
+            "name": "Can add session", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_session", 
+            "name": "Can change session", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_session", 
+            "name": "Can delete session", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_site", 
+            "name": "Can add site", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_site", 
+            "name": "Can change site", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_site", 
+            "name": "Can delete site", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "haydark", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2014-08-27T05:57:07.650Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$SdmKTbPa6QqD$fEc+kLNUrveUxxoddwKSI6fagnnZkH4XfDjDoUKV/sU=", 
+            "email": "rad@hotmail.com", 
+            "date_joined": "2014-08-27T05:38:14.290Z"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "can", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2014-08-27T06:13:45.442Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$2m94yP8VUdwD$uhVsYz2a0QgBaM+RrIfmQVz0lbsBV5HTZl5CxL3s1IY=", 
+            "email": "", 
+            "date_joined": "2014-08-27T06:13:45.442Z"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "taner", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2014-08-27T06:14:36.768Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$jlXjPOjszTtR$KjZElzWDDJBROrNY6VNAYtVmWxPlJzosghCzohA+jt8=", 
+            "email": "", 
+            "date_joined": "2014-08-27T06:14:36.226Z"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:27:05.193Z", 
+            "object_repr": "Post 3 efsane olmu\u015f reis. Ama sen bence bir daha blog payla\u015f\u0131m\u0131 yapma. Zirven bu olsun.", 
+            "object_id": "3", 
+            "change_message": "Changed userProfile.", 
+            "user": 1, 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 1, 
+            "action_time": "2014-08-27T06:26:50.670Z", 
+            "object_repr": "Post 3 efsane olmu\u015f reis. Ama sen bence bir daha blog payla\u015f\u0131m\u0131 yapma. Zirven bu olsun.", 
+            "object_id": "3", 
+            "change_message": "", 
+            "user": 1, 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 1, 
+            "action_time": "2014-08-27T06:25:58.771Z", 
+            "object_repr": "Bu post 2 i\u00e7in yorumum: Allah'\u0131ndan bul emi.", 
+            "object_id": "2", 
+            "change_message": "", 
+            "user": 1, 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 1, 
+            "action_time": "2014-08-27T06:25:18.624Z", 
+            "object_repr": "Selam, Bu post 1 i\u00e7in yorumum. Ne bi\u00e7im yaz\u0131 la bu.", 
+            "object_id": "1", 
+            "change_message": "", 
+            "user": 1, 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 1, 
+            "action_time": "2014-08-27T06:24:38.984Z", 
+            "object_repr": "Bu da post 3 \u00fcn ba\u015fl\u0131\u011f\u0131", 
+            "object_id": "3", 
+            "change_message": "", 
+            "user": 1, 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 1, 
+            "action_time": "2014-08-27T06:23:55.941Z", 
+            "object_repr": "Post 2 ba\u015fl\u0131\u011f\u0131 bu", 
+            "object_id": "2", 
+            "change_message": "", 
+            "user": 1, 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:23:19.165Z", 
+            "object_repr": "haydark", 
+            "object_id": "1", 
+            "change_message": "Changed picture, city, phone, education, age and favorite_animal.", 
+            "user": 1, 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:21:25.754Z", 
+            "object_repr": "can", 
+            "object_id": "2", 
+            "change_message": "Changed picture, city, phone, education, age, single and favorite_animal.", 
+            "user": 1, 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:19:37.442Z", 
+            "object_repr": "taner", 
+            "object_id": "3", 
+            "change_message": "Changed picture, city, phone, education, age, single and favorite_animal.", 
+            "user": 1, 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 1, 
+            "action_time": "2014-08-27T05:57:32.925Z", 
+            "object_repr": "post 1 bu", 
+            "object_id": "1", 
+            "change_message": "", 
+            "user": 1, 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "UserAccount.userprofile", 
+        "fields": {
+            "picture": "profile_pic/haydar.jpg", 
+            "city": "\u0130stanbul", 
+            "age": 25, 
+            "phone": "05345912221", 
+            "single": false, 
+            "user": 1, 
+            "education": "Bo\u011fazi\u00e7i \u00dcni", 
+            "favorite_animal": "At"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "UserAccount.userprofile", 
+        "fields": {
+            "picture": "profile_pic/can.gif", 
+            "city": "\u0130stanbul", 
+            "age": 21, 
+            "phone": "05358900000", 
+            "single": true, 
+            "user": 2, 
+            "education": "\u00c7anakkale \u00dcniversitesi", 
+            "favorite_animal": "Papa\u011fan"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "UserAccount.userprofile", 
+        "fields": {
+            "picture": "profile_pic/tanerjpg", 
+            "city": "\u0130stanbul", 
+            "age": 19, 
+            "phone": "05358976542", 
+            "single": true, 
+            "user": 3, 
+            "education": "\u0130stanbul \u00dcniversitesi", 
+            "favorite_animal": "Kurt"
+        }
+    }
+]

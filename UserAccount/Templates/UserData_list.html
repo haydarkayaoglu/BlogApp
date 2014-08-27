@@ -5,14 +5,12 @@
 </head>
 <body>
 
-
 {% if request.user.is_authenticated %}
     <h3>Hoş geldin {{request.user.first_name}}
                     {{request.user.last_name}}</h3>
+
+    <a href="/accounts/logout/">Çıkış</a>
 {% endif %}
-
-
-
 
 
 <table border="1" align="center">
@@ -22,22 +20,20 @@
         <th height="50px" width="190px">E-Posta</th>
     </tr>
 
-    {% for UserData in users %}
+    {% for UserProfile in users %}
     <tr>
-        <td height="30px">{{ UserData.name }}</td>
-        <td>{{ UserData.surname }}</td>
-        <td>{{ UserData.phone }}</td>
-        <td>{{ UserData.email }}</td>
+        <td height="30px">{{ UserProfile.user.first_name }}</td>
+        <td>{{ UserProfile.user.last_name }}</td>
+        <td>{{ UserProfile.phone }}</td>
+        <td>{{ UserProfile.user.email }}</td>
     </tr>
-
-
     {% endfor %}
 
-    <a href="/accounts/logout/">Çıkış</a>
+
 </table>
 
 
-
+<div><a href="/UserProfile/">Profilim</div>
 
 </body>
 </html>

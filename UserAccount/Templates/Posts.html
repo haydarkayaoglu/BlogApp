@@ -6,31 +6,37 @@
 </head>
 <body>
 
+
 <table border="1" align="center">
-    <tr>
-        <th height="50px" width="100px">Post</th>
-        <th height="50px" width="100px">Yazar Adı</th>
-        <th height="50px" width="100px">İçerik</th>
-        <th height="50px" width="100px">Yorum</th>
-        <th height="50px" width="100px">Yorumcu</th>
-    </tr>
-    {% for BlogPost in posts %}
-        <tr>
-            <td>{{ BlogPost.content }}</td>
-            <td>{{ BlogPost.blogUser.get_full_name }}</td>
+     {% for BlogPost in posts %}
+     <tr>
+         <th bgcolor="#f5f5dc" >Başlık</th>
+         <td bgcolor="#ffe4c4" align="center">{{ BlogPost.title }}</td>
+     </tr>
+     <tr>
+         <th>Yazar Adı</th>
+         <td align="right">{{ BlogPost.blogUser.user.get_full_name }}</td>
+     </tr>
+     <tr>
+         <th height="50px" width="100px">İçerik</th>
+         <td bgcolor="#b0c4de">{{ BlogPost.content }}</td>
+     </tr>
+     <tr>
+         <th height="50px" width="100px">Yorum</th>
+
+         {% for cmmnt in BlogPost.comments.all %}
+         <td>{{  cmmnt.comment }}</td>
+
+     <tr>
+         <th>Yorumcu</th>
+         <td align="right" >{{ cmmnt.userProfile.user.get_full_name }}</td>
+      </tr>
+         {% endfor %}
+     </tr>
 
 
-                {% for cmmnt in BlogPost.comments.all %}
-                    <td>{{ cmmnt.comment}}---</td>
-                {% endfor %}
-
-                {% for yrmc in BlogComment.userData.get_full_name %}
-                    <td>{{ yrmc.get_full_name}}---</td>
-                {% endfor %}
-        </tr>
-    {% endfor %}
+     {% endfor %}
 </table>
-
 
 
 

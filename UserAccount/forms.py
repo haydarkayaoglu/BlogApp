@@ -1,22 +1,16 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.forms.models import ModelForm
-from UserAccount.models import UserData
-from django.contrib.auth.hashers import make_password
+from UserAccount.models import BlogPost, UserProfile
 
 
 class UserDataForm (ModelForm):
 
-    sifre = forms.CharField(label="Şifre", help_text="Bir parola yazın", required=False)
-
     class Meta:
-        model = UserData
-        fields = ('first_name', 'last_name', 'username', 'sifre', 'age', 'phone', 'email')
+        model = UserProfile
 
     def save(self, commit=True):
         instance = super(UserDataForm, self).save(commit=False)
-        if self.cleaned_data.get('sifre'):
-            instance.password = make_password(self.cleaned_data['sifre'])
         if commit:
             instance.save()
         return instance
@@ -28,3 +22,26 @@ class UserDataForm (ModelForm):
                 raise forms.ValidationError('Telefon numarasi 11 karakter olmalidir.')
         return tel
 
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        exclude = ('user', )
+
+
+#kullanıcınn post göndermesi için
+class UserPostCreationForm (forms.ModelForm):
+    class Meta:
+        model = BlogPost
+        fields = ('title', 'content',)
+
+    def save(self, commit=True):
+        instance = super(UserPostCreationForm, self).save(commit=False)
+        if commit:
+            instance.save()
+        return instance
+
+
+# class UserPostsForm(forms.ModelForm):
+#     class Meta:
+#         model = BlogPost

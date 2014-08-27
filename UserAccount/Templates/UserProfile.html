@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <title>User Profil</title>
 
-    {% if request.user.is_authenticated %}
-    <h3>Hoş geldin {{request.user.first_name}}
-                    {{request.user.last_name}}</h3>
-    {% endif %}
 
 
 
@@ -15,31 +11,23 @@
 </head>
 <body>
 
-
-<table border="1" align="center">
-    <tr><th height="50px" width="100px">Adi</th>
-        <th height="50px" width="100px">Soyadi</th>
-        <th height="50px" width="100px">Telefon</th>
-        <th height="50px" width="190px">E-Posta</th>
-        <th height="50px" width="190px">Profil Resmi</th>
-    </tr>
-
-    {% for UserData in users %}
-    <tr>
-        <td height="30px">{{ UserData.name }}</td>
-        <td>{{ UserData.surname }}</td>
-        <td>{{ UserData.phone }}</td>
-        <td>{{ UserData.email }}</td>
-    </tr>
+<h1>Profilim</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
 
 
-    {% endfor %}
+        <table border="1">
+             <h2>Hoş geldin {{ user.get_full_name }} </h2>
 
-    <a href="/accounts/logout/">Çıkış</a>
-</table>
+            {{ form }}
+        </table>
+    <div><a href="/accounts/password" target="_blank">Şifre Değiştir</a></div>
+    </form>
 
 
 
+
+<a href="/accounts/logout/">Çıkış</a>
 
 </body>
 </html>
