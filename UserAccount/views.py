@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
-from django.core.context_processors import request
+
 from django.http import *
 from django.shortcuts import render_to_response, render
-from django.template import RequestContext
-from UserAccount.models import *
-from UserAccount.forms import UserDataForm, UserCreateForm
+from UserAccount.forms import UserDataForm, UserCreateForm, UserPostCreationForm
 from UserAccount.forms import UserProfileForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import *
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import UserCreationForm
 from django.conf import settings
 from models import UserProfile
 
@@ -25,26 +20,6 @@ def users(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/accounts/login/?next=%s' % request.path)
     return render_to_response('UserData_list.html', locals())
-
-
-def user_profile(Request):
-    if request.GET.get('cikis'):
-        logout(request)
-        return HttpResponseRedirect('/posts/')
-
-    if request.POST.get('giris'):
-        giris_formu = AuthenticationForm(data=request.POST)
-        if giris_formu.is_valid():
-            kullaniciadi = request.POST['username']
-            sifre = request.POST['password']
-            kullanici = authenticate(username=kullaniciadi, password=sifre)
-            if kullanici is not None:
-                if kullanici.is_active:
-                    login(request, kullanici)
-    else:
-        giris_formu = AuthenticationForm()
-
-    return render_to_response('UserProfile.html', locals(), context_instance=RequestContext(request))
 
 
 def kullanici_kontrol(user):
