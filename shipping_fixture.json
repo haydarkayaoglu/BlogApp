@@ -106,11 +106,11 @@
         }
     }, 
     {
-        "pk": "615a1a6ae97d82429e62f68ca85e2a9c", 
+        "pk": "10ea0af7822d2557adb869778767f77e", 
         "model": "sessions.session", 
         "fields": {
-            "expire_date": "2014-09-10T06:28:33.483Z", 
-            "session_data": "YzE3OTE1ODAwNmMxYTcyMjYyNzY0Yzg2ZGQwMzNjMTc3YjgzMTg1ZTqAAn1xAShVCnRlc3Rjb29r\naWVVBndvcmtlZHECVQ1fYXV0aF91c2VyX2lkSwNVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdv\nLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmR1Lg==\n"
+            "expire_date": "2014-09-10T08:49:25.090Z", 
+            "session_data": "M2U2NGI0NjVjYmQwMjQ5ZjJlNmFkMjA2N2NiMWViYTY5ODlhYzcxNzqAAn1xAShVCnRlc3Rjb29r\naWVxAlUGd29ya2VkcQNVDV9hdXRoX3VzZXJfaWRLBFUSX2F1dGhfdXNlcl9iYWNrZW5kVSlkamFu\nZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHUu\n"
         }
     }, 
     {
@@ -450,17 +450,17 @@
         "model": "auth.user", 
         "fields": {
             "username": "haydark", 
-            "first_name": "", 
-            "last_name": "", 
+            "first_name": "Haydar", 
+            "last_name": "Kayao\u011flu", 
             "is_active": true, 
             "is_superuser": true, 
             "is_staff": true, 
-            "last_login": "2014-08-27T05:57:07.650Z", 
+            "last_login": "2014-08-27T07:42:43.054Z", 
             "groups": [], 
             "user_permissions": [], 
             "password": "pbkdf2_sha256$10000$SdmKTbPa6QqD$fEc+kLNUrveUxxoddwKSI6fagnnZkH4XfDjDoUKV/sU=", 
             "email": "rad@hotmail.com", 
-            "date_joined": "2014-08-27T05:38:14.290Z"
+            "date_joined": "2014-08-27T05:38:14Z"
         }
     }, 
     {
@@ -468,17 +468,17 @@
         "model": "auth.user", 
         "fields": {
             "username": "can", 
-            "first_name": "", 
-            "last_name": "", 
+            "first_name": "Can", 
+            "last_name": "D\u00fc\u015fman\u0131", 
             "is_active": true, 
             "is_superuser": false, 
             "is_staff": false, 
-            "last_login": "2014-08-27T06:13:45.442Z", 
+            "last_login": "2014-08-27T06:58:40.248Z", 
             "groups": [], 
             "user_permissions": [], 
             "password": "pbkdf2_sha256$10000$2m94yP8VUdwD$uhVsYz2a0QgBaM+RrIfmQVz0lbsBV5HTZl5CxL3s1IY=", 
-            "email": "", 
-            "date_joined": "2014-08-27T06:13:45.442Z"
+            "email": "candusmani@hotmail.com", 
+            "date_joined": "2014-08-27T06:13:45Z"
         }
     }, 
     {
@@ -486,17 +486,74 @@
         "model": "auth.user", 
         "fields": {
             "username": "taner", 
-            "first_name": "", 
-            "last_name": "", 
+            "first_name": "Taner", 
+            "last_name": "Akl\u0131selim", 
             "is_active": true, 
             "is_superuser": false, 
             "is_staff": false, 
-            "last_login": "2014-08-27T06:14:36.768Z", 
+            "last_login": "2014-08-27T06:14:36Z", 
             "groups": [], 
             "user_permissions": [], 
             "password": "pbkdf2_sha256$10000$jlXjPOjszTtR$KjZElzWDDJBROrNY6VNAYtVmWxPlJzosghCzohA+jt8=", 
+            "email": "tanerakliselim@hotmail.com", 
+            "date_joined": "2014-08-27T06:14:36Z"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "BekirY", 
+            "first_name": "bekir", 
+            "last_name": "yilmaz", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2014-08-27T08:29:47.776Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$QI4DNxb0Mt3V$YrZu6sAxp+MR2RIoEy9M2Me3TAY4wD2RngwYMFp0qLQ=", 
             "email": "", 
-            "date_joined": "2014-08-27T06:14:36.226Z"
+            "date_joined": "2014-08-27T08:29:47.239Z"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:36:53.727Z", 
+            "object_repr": "taner", 
+            "object_id": "3", 
+            "change_message": "Changed password, first_name, last_name and email.", 
+            "user": 1, 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:36:15.706Z", 
+            "object_repr": "haydark", 
+            "object_id": "1", 
+            "change_message": "Changed password, first_name and last_name.", 
+            "user": 1, 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "admin.logentry", 
+        "fields": {
+            "action_flag": 2, 
+            "action_time": "2014-08-27T06:35:56.180Z", 
+            "object_repr": "can", 
+            "object_id": "2", 
+            "change_message": "Changed password, first_name, last_name and email.", 
+            "user": 1, 
+            "content_type": 3
         }
     }, 
     {
@@ -669,6 +726,20 @@
             "user": 3, 
             "education": "\u0130stanbul \u00dcniversitesi", 
             "favorite_animal": "Kurt"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "UserAccount.userprofile", 
+        "fields": {
+            "picture": "", 
+            "city": "", 
+            "age": null, 
+            "phone": "", 
+            "single": false, 
+            "user": 4, 
+            "education": "", 
+            "favorite_animal": "Cats."
         }
     }
 ]
